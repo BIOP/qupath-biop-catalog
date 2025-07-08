@@ -8,7 +8,7 @@ def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json"
 def qupathMinVersionRange = new VersionRange("v0.6.0", null, null)
 
 // cellpose extension
-def cellposeTagList = ["v0.10.2"] 
+def cellposeTagList = ["v0.11.0"] 
 def cellposeVersionList = []
 cellposeTagList.each{tag->
     var cellposeRelease = new Release(
@@ -32,6 +32,7 @@ var cellposeExtension = new Extension(
 )
 extensionList.add(cellposeExtension)
 
+/*
 // abba extension
 def abbaTagList = ["0.3.3"] 
 def abbaVersionList = []
@@ -81,7 +82,7 @@ var warpyExtension = new Extension(
    false,
    warpyVersionList
 )
-extensionList.add(warpyExtension)
+extensionList.add(warpyExtension)*/
 
 
 // spotiflow extension
@@ -109,7 +110,7 @@ var spotiflowExtension = new Extension(
 )
 extensionList.add(spotiflowExtension)
 
-
+/*
 // hrm extension
 def hrmTagList = ["v1.1.0"] 
 def hrmVersionList = []
@@ -136,7 +137,7 @@ var hrmExtension = new Extension(
    false,
    hrmVersionList
 )
-extensionList.add(hrmExtension)
+extensionList.add(hrmExtension)*/
 
 
 // biop extension
