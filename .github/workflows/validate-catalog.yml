@@ -1,0 +1,45 @@
+# This workflow will run unit tests when main is updated, on pull requests or when manually activated
+
+name: pytest
+
+on:
+  push:
+    branches:
+      main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          repository: qupath/extension-catalog-model
+          path: extension-catalog-model
+
+      - name: Set up python
+        id: setup-python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install
+        run: pip install ./extension-catalog-model
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run validation
+        shell: python
+        run: |
+          from extension_catalog_model.model import *
+          with open('catalog.json') as f:
+              jsontext = f.read()
+              Catalog.model_validate_json(jsontext)
+            
