@@ -30,13 +30,13 @@
       "starred": false,
       "releases": [
         {
-          "name": "v0.4.0",
-          "main_url": "https://github.com/BIOP/qupath-extension-abba/releases/download/v0.4.0/qupath-extension-abba-0.4.0.zip",
+          "name": "v0.3.3",
+          "main_url": "https://github.com/BIOP/qupath-extension-abba/releases/download/0.3.3/qupath-extension-abba-0.3.3.zip",
           "required_dependency_urls": [],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.4.0",
+            "min": "v0.3.3",
             "excludes": []
           }
         }
@@ -50,13 +50,13 @@
       "starred": false,
       "releases": [
         {
-          "name": "v0.4.0",
-          "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/v0.4.0/qupath-extension-warpy-0.4.0.zip",
+          "name": "v0.3.1",
+          "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.3.1/qupath-extension-warpy-0.3.1.zip",
           "required_dependency_urls": [],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.4.0",
+            "min": "v0.3.1",
             "excludes": []
           }
         }
