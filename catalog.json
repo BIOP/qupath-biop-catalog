@@ -16,7 +16,7 @@
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.10.2",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
@@ -36,7 +36,7 @@
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.3.3",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
@@ -56,7 +56,7 @@
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.3.1",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
@@ -76,7 +76,7 @@
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v0.2.0",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
@@ -99,7 +99,7 @@
           ],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v1.1.0",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
@@ -119,7 +119,7 @@
           "optional_dependency_urls": [],
           "javadoc_urls": [],
           "version_range": {
-            "min": "v3.3.0",
+            "min": "v0.6.0",
             "excludes": []
           }
         }
