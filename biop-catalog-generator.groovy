@@ -86,12 +86,12 @@ extensionList.add(warpyExtension)*/
 
 
 // spotiflow extension
-def spotiflowTagList = ["v0.2.0"] 
+/*def spotiflowTagList = ["v0.2.0"] 
 def spotiflowVersionList = []
 spotiflowTagList.each{tag->
     var spotiflowRelease = new Release(
        tag,
-       new URI("https://github.com/BIOP/qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".zip"),
+       new URI("https://github.com/BIOP/qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),
        null,
        null,
        null,
@@ -108,7 +108,7 @@ var spotiflowExtension = new Extension(
    false,
    spotiflowVersionList
 )
-extensionList.add(spotiflowExtension)
+extensionList.add(spotiflowExtension)*/
 
 /*
 // hrm extension
@@ -119,7 +119,7 @@ def socVersion = "5.19.0"
 hrmTagList.each{tag->
     var hrmRelease = new Release(
        tag,
-       new URI("https://github.com/BIOP/qupath-extension-biop-hrm/releases/download/"+tag+"/qupath-extension-biop-hrm-"+tag[1..-1]+".zip"),
+       new URI("https://github.com/BIOP/qupath-extension-biop-hrm/releases/download/"+tag+"/qupath-extension-biop-hrm-"+tag[1..-1]+".jar"),
        null,
        List.of(new URI("https://maven.scijava.org/service/local/artifact/maven/redirect?r=central&g=org.jsoup&a=jsoup&v="+jsoupVersion+"&e=jar"), 
                new URI("https://github.com/GReD-Clermont/simple-omero-client/releases/download/"+socVersion+"/simple-omero-client-"+socVersion+".jar")),
@@ -146,7 +146,7 @@ def biopVersionList = []
 biopTagList.each{tag->
     var biopRelease = new Release(
        tag,
-       new URI("https://github.com/BIOP/qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".zip"),
+       new URI("https://github.com/BIOP/qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".jar"),
        null,
        null,
        null,

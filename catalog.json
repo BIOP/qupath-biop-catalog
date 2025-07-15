@@ -23,26 +23,6 @@
       ]
     },
     {
-      "name": "QuPath Spotiflow extension",
-      "description": "QuPath extension to use Spotiflow",
-      "author": "BIOP",
-      "homepage": "https://github.com/BIOP/qupath-extension-spotiflow",
-      "starred": false,
-      "releases": [
-        {
-          "name": "v0.2.0",
-          "main_url": "https://github.com/BIOP/qupath-extension-spotiflow/releases/download/v0.2.0/qupath-extension-spotiflow-0.2.0.zip",
-          "required_dependency_urls": [],
-          "optional_dependency_urls": [],
-          "javadoc_urls": [],
-          "version_range": {
-            "min": "v0.6.0",
-            "excludes": []
-          }
-        }
-      ]
-    },
-    {
       "name": "QuPath BIOP extension",
       "description": "QuPath extension containing utilitiy functions by the BIOP",
       "author": "BIOP",
@@ -51,7 +31,7 @@
       "releases": [
         {
           "name": "v3.3.0",
-          "main_url": "https://github.com/BIOP/qupath-extension-biop/releases/download/v3.3.0/qupath-extension-biop-3.3.0.zip",
+          "main_url": "https://github.com/BIOP/qupath-extension-biop/releases/download/v3.3.0/qupath-extension-biop-3.3.0.jar",
           "required_dependency_urls": [],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
