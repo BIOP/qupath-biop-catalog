@@ -15,21 +15,21 @@ This catalog includes the following extensions
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-cellpose](https://github.com/BIOP/qupath-extension-cellpose)
 
-
+<!--
 ### QuPath Spotiflow extension
 
 - **First version compatible with QuPath 0.6.x**: v0.2.0
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-spotiflow](https://github.com/BIOP/qupath-extension-spotiflow)
 
-
+-->
 ### QuPath BIOP extension
 
 - **First version compatible with QuPath 0.6.x**: v3.3.0
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-biop](https://github.com/BIOP/qupath-extension-biop)
 
-
+<!--
 ### QuPath ABBA extension
 
 - **First version compatible with QuPath 0.6.x**: v0.4.0
@@ -42,7 +42,7 @@ This catalog includes the following extensions
 - **First version compatible with QuPath 0.6.x**: v0.4.0
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-warpy](https://github.com/BIOP/qupath-extension-warpy)
-
+-->
 ## Installation
 
 This catalog is NOT enabled by default in QuPath. In order to add it to the list of available catalogs: 
