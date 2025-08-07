@@ -4,7 +4,8 @@ import com.google.gson.FieldNamingPolicy
 import java.nio.file.Paths
 
 def extensionList = []
-def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json"
+//def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json"
+def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json"
 def qupathMinVersionRange = new VersionRange("v0.6.0", null, null)
 
 // cellpose extension
@@ -57,16 +58,21 @@ var abbaExtension = new Extension(
    abbaVersionList
 )
 extensionList.add(abbaExtension)
-
+*/
 
 // warpy extension
-def warpyTagList = ["0.3.1"] 
+def warpyTagList = ["0.4.2"] 
 def warpyVersionList = []
 warpyTagList.each{tag->
     var warpyRelease = new Release(
        "v"+tag,
-       new URI("https://github.com/BIOP/qupath-extension-warpy/releases/download/"+tag+"/qupath-extension-warpy-"+tag+".zip"),
-       null,
+       new URI("https://github.com/BIOP/qupath-extension-warpy/releases/download/"+tag+"/qupath-extension-warpy-"+tag+".jar"),
+           List.of(new URI("https://maven.scijava.org/service/local/repositories/releases/content/net/imglib2/imglib2-realtransform/3.1.2/imglib2-realtransform-3.1.2.jar"), // real-transform
+                   new URI("https://maven.scijava.org/service/local/repositories/central/content/net/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar"), // imglib2
+                   new URI("https://maven.scijava.org/service/local/repositories/releases/content/jitk/jitk-tps/3.0.2/jitk-tps-3.0.2.jar"), // jitk-tps
+                   new URI("https://maven.scijava.org/service/local/repositories/central/content/com/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar"), // ejml
+                   new URI("https://maven.scijava.org/service/local/repositories/central/content/gov/nist/math/jama/1.0.2/jama-1.0.2.jar") // jama
+           ),
        null,
        null,
        qupathMinVersionRange
@@ -82,7 +88,7 @@ var warpyExtension = new Extension(
    false,
    warpyVersionList
 )
-extensionList.add(warpyExtension)*/
+extensionList.add(warpyExtension)
 
 
 // spotiflow extension
