@@ -34,10 +34,10 @@
           "main_url": "https://github.com/BIOP/qupath-extension-abba/releases/download/0.4.0/qupath-extension-abba-0.4.0.jar",
           "required_dependency_urls": [
             "https://maven.scijava.org/service/local/repositories/releases/content/net/imglib2/imglib2-realtransform/3.1.2/imglib2-realtransform-3.1.2.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentnet/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar",
+            "https://maven.scijava.org/service/local/repositories/central/content/net/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar",
             "https://maven.scijava.org/service/local/repositories/releases/content/jitk/jitk-tps/3.0.2/jitk-tps-3.0.2.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentcom/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentgov/nist/math/jama/1.0.2/jama-1.0.2.jar",
+            "https://maven.scijava.org/service/local/repositories/central/content/com/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
+            "https://maven.scijava.org/service/local/repositories/central/content/gov/nist/math/jama/1.0.2/jama-1.0.2.jar",
             "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.4.0/qupath-extension-warpy-0.4.0.jar"
           ],
           "optional_dependency_urls": [],
@@ -61,10 +61,10 @@
           "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.4.2/qupath-extension-warpy-0.4.2.jar",
           "required_dependency_urls": [
             "https://maven.scijava.org/service/local/repositories/releases/content/net/imglib2/imglib2-realtransform/3.1.2/imglib2-realtransform-3.1.2.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentnet/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar",
+            "https://maven.scijava.org/service/local/repositories/central/content/net/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar",
             "https://maven.scijava.org/service/local/repositories/releases/content/jitk/jitk-tps/3.0.2/jitk-tps-3.0.2.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentcom/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
-            "https://maven.scijava.org/service/local/repositories/central/contentgov/nist/math/jama/1.0.2/jama-1.0.2.jar"
+            "https://maven.scijava.org/service/local/repositories/central/content/com/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
+            "https://maven.scijava.org/service/local/repositories/central/content/gov/nist/math/jama/1.0.2/jama-1.0.2.jar"
           ],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
