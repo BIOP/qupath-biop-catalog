@@ -29,7 +29,7 @@ This catalog includes the following extensions
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-biop](https://github.com/BIOP/qupath-extension-biop)
 
-<!--
+
 ### QuPath ABBA extension
 
 - **First version compatible with QuPath 0.6.x**: v0.4.0
@@ -39,10 +39,10 @@ This catalog includes the following extensions
 
 ### QuPath Warpy extension
 
-- **First version compatible with QuPath 0.6.x**: v0.4.0
+- **First version compatible with QuPath 0.6.x**: v0.4.2
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-warpy](https://github.com/BIOP/qupath-extension-warpy)
--->
+
 ## Installation
 
 This catalog is NOT enabled by default in QuPath. In order to add it to the list of available catalogs: 
