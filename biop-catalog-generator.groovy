@@ -9,6 +9,7 @@
  * - ABBA extension - Atlas alignment  
  * - Warpy extension - Image transformations
  * - BIOP extension - Utility functions
+ * - Spotiflow extension - Point detection
  * 
  * Usage: Run in QuPath script editor. Update 'savingFolder' path as needed.
  * Output: catalog.json file for use with QuPath extension manager
@@ -19,8 +20,8 @@
  */
 
 // --------------- YOU NEED TO MODIFY THIS VARIABLE BEFORE RUNNING IT
-def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
-//def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
+//def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
+def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
 
 
 // Versions for packages which are common between different extensions
@@ -62,7 +63,7 @@ var cellposeExtension = new Extension(
    "QuPath Cellpose extension",
    "QuPath extension to use Cellpose",
    "BIOP",
-   new URI(gh_biop_url+"qupath-extension-cellpose"),
+   new URI(gh_biop_url + "qupath-extension-cellpose"),
    false,
    cellposeVersionList
 )
@@ -93,7 +94,7 @@ var warpyExtension = new Extension(
    "QuPath Warpy extension",
    "Warpy - QuPath extension that supports transformations (affine, spline) of images.",
    "BIOP",
-   new URI("https://github.com/BIOP/qupath-extension-warpy"),
+   new URI(gh_biop_url + "qupath-extension-warpy"),
    false,
    warpyVersionList
 )
@@ -126,19 +127,19 @@ var abbaExtension = new Extension(
    "QuPath ABBA extension",
    "QuPath extension to use Aligning Big Brain and Atlases",
    "BIOP",
-   new URI("https://github.com/BIOP/qupath-extension-abba"),
+   new URI(gh_biop_url + "qupath-extension-abba"),
    false,
    abbaVersionList
 )
 extensionList.add(abbaExtension)
 
 // spotiflow extension
-/*def spotiflowTagList = ["v0.2.0"] 
+def spotiflowTagList = ["v0.2.0"] 
 def spotiflowVersionList = []
 spotiflowTagList.each{tag->
     var spotiflowRelease = new Release(
        tag,
-       new URI("https://github.com/BIOP/qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),
+       new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),
        null,
        null,
        null,
@@ -151,11 +152,11 @@ var spotiflowExtension = new Extension(
    "QuPath Spotiflow extension",
    "QuPath extension to use Spotiflow",
    "BIOP",
-   new URI("https://github.com/BIOP/qupath-extension-spotiflow"),
+   new URI(gh_biop_url + "qupath-extension-spotiflow"),
    false,
    spotiflowVersionList
 )
-extensionList.add(spotiflowExtension)*/
+extensionList.add(spotiflowExtension)
 
 /*
 // hrm extension
@@ -194,7 +195,7 @@ def biopVersionList = []
 biopTagList.each{tag->
     var biopRelease = new Release(
        tag,
-       new URI("https://github.com/BIOP/qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".jar"),
+       new URI(gh_biop_url + "qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".jar"),
        null,
        null,
        null,
@@ -207,7 +208,7 @@ var biopExtension = new Extension(
    "QuPath BIOP extension",
    "QuPath extension containing utilitiy functions by the BIOP",
    "BIOP",
-   new URI("https://github.com/BIOP/qupath-extension-biop"),
+   new URI(gh_biop_url + "qupath-extension-biop"),
    false,
    biopVersionList
 )
