@@ -69,39 +69,6 @@ var cellposeExtension = new Extension(
 extensionList.add(cellposeExtension)
 
 
-// ------------------------ ABBA EXTENSION
-
-def abbaTagList = ["0.4.0"] 
-def abbaVersionList = []
-abbaTagList.each{tag->
-    var abbaRelease = new Release(
-       "v"+tag,
-                   new URI(gh_biop_url    +"qupath-extension-abba/releases/download/"          +tag+                          "/qupath-extension-abba-" +tag+                          ".jar"),
-           List.of(new URI(mvn_sj_url     +"net/imglib2/imglib2-realtransform/"                +imglib2_realtransform_version+"/imglib2-realtransform-" +imglib2_realtransform_version+".jar"), // real-transform
-                   new URI(mvn_central_url+"net/imglib2/imglib2/"                              +imglib2_version+              "/imglib2-"               +imglib2_version+              ".jar"), // imglib2
-                   new URI(mvn_sj_url     +"jitk/jitk-tps/"                                    +jitk_tps_version+             "/jitk-tps-"              +jitk_tps_version+             ".jar"), // jitk-tps
-                   new URI(mvn_central_url+"com/googlecode/efficient-java-matrix-library/ejml/"+ejml_version+                 "/ejml-"                  +ejml_version+                 ".jar"), // ejml
-                   new URI(mvn_central_url+"gov/nist/math/jama/"                               +jama_version+                 "/jama-"                  +jama_version+                 ".jar"), // jama
-                   new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +tag+                          "/qupath-extension-warpy-"+tag+                          ".jar")  // warpy
-      
-           ),
-       null,
-       null,
-       qupathMinVersionRange
-    )
-    
-    abbaVersionList.add(abbaRelease)
-}
-var abbaExtension = new Extension(
-   "QuPath ABBA extension",
-   "QuPath extension to use Aligning Big Brain and Atlases",
-   "BIOP",
-   new URI("https://github.com/BIOP/qupath-extension-abba"),
-   false,
-   abbaVersionList
-)
-extensionList.add(abbaExtension)
-
 // ------------------------ WARPY EXTENSION
 def warpyTagList = ["0.4.2"] 
 def warpyVersionList = []
@@ -132,6 +99,38 @@ var warpyExtension = new Extension(
 )
 extensionList.add(warpyExtension)
 
+
+// ------------------------ ABBA EXTENSION
+def abbaTagList = ["0.4.0"] 
+def abbaVersionList = []
+abbaTagList.each{tag->
+    var abbaRelease = new Release(
+       "v"+tag,
+                   new URI(gh_biop_url    +"qupath-extension-abba/releases/download/"          +tag+                          "/qupath-extension-abba-" +tag+                          ".jar"),
+           List.of(new URI(mvn_sj_url     +"net/imglib2/imglib2-realtransform/"                +imglib2_realtransform_version+"/imglib2-realtransform-" +imglib2_realtransform_version+".jar"), // real-transform
+                   new URI(mvn_central_url+"net/imglib2/imglib2/"                              +imglib2_version+              "/imglib2-"               +imglib2_version+              ".jar"), // imglib2
+                   new URI(mvn_sj_url     +"jitk/jitk-tps/"                                    +jitk_tps_version+             "/jitk-tps-"              +jitk_tps_version+             ".jar"), // jitk-tps
+                   new URI(mvn_central_url+"com/googlecode/efficient-java-matrix-library/ejml/"+ejml_version+                 "/ejml-"                  +ejml_version+                 ".jar"), // ejml
+                   new URI(mvn_central_url+"gov/nist/math/jama/"                               +jama_version+                 "/jama-"                  +jama_version+                 ".jar"), // jama
+                   new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +warpyTagList[0]+              "/qupath-extension-warpy-"+tag+                          ".jar")  // warpy
+      
+           ),
+       null,
+       null,
+       qupathMinVersionRange
+    )
+    
+    abbaVersionList.add(abbaRelease)
+}
+var abbaExtension = new Extension(
+   "QuPath ABBA extension",
+   "QuPath extension to use Aligning Big Brain and Atlases",
+   "BIOP",
+   new URI("https://github.com/BIOP/qupath-extension-abba"),
+   false,
+   abbaVersionList
+)
+extensionList.add(abbaExtension)
 
 // spotiflow extension
 /*def spotiflowTagList = ["v0.2.0"] 
