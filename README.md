@@ -15,14 +15,14 @@ This catalog includes the following extensions
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-cellpose](https://github.com/BIOP/qupath-extension-cellpose)
 
-<!--
+
 ### QuPath Spotiflow extension
 
 - **First version compatible with QuPath 0.6.x**: v0.2.0
 - **Last version compatible with QuPath 0.6.x**: ....
 - **Repository**: [https://github.com/BIOP/qupath-extension-spotiflow](https://github.com/BIOP/qupath-extension-spotiflow)
 
--->
+
 ### QuPath BIOP extension
 
 - **First version compatible with QuPath 0.6.x**: v3.3.0
