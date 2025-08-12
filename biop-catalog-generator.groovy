@@ -190,7 +190,7 @@ extensionList.add(hrmExtension)*/
 
 // ------------------------ BIOP EXTENSION
 
-def biopTagList = ["v3.3.0"] 
+def biopTagList = ["v3.3.0", "v3.4.0"]
 def biopVersionList = []
 biopTagList.each{tag->
     var biopRelease = new Release(
