@@ -103,6 +103,17 @@
       "starred": false,
       "releases": [
         {
+          "name": "v3.4.2",
+          "main_url": "https://github.com/BIOP/qupath-extension-biop/releases/download/v3.4.2/qupath-extension-biop-3.4.2.jar",
+          "required_dependency_urls": [],
+          "optional_dependency_urls": [],
+          "javadoc_urls": [],
+          "version_range": {
+            "min": "v0.6.0",
+            "excludes": []
+          }
+        },
+        {
           "name": "v3.4.1",
           "main_url": "https://github.com/BIOP/qupath-extension-biop/releases/download/v3.4.1/qupath-extension-biop-3.4.1.jar",
           "required_dependency_urls": [],
