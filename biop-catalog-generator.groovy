@@ -20,8 +20,8 @@
  */
 
 // --------------- YOU NEED TO MODIFY THIS VARIABLE BEFORE RUNNING IT
-//def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
-def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
+def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
+//def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
 
 
 // Versions for packages which are common between different extensions
@@ -32,10 +32,8 @@ def jitk_tps_version = "3.0.2"
 def ejml_version = "0.24"
 def jama_version = "1.0.2"
 
-
-
-def mvn_sj_url = "https://maven.scijava.org/service/local/repositories/releases/content/"
-def mvn_central_url = "https://maven.scijava.org/service/local/repositories/central/content/"
+def mvn_sj_url = "https://maven.scijava.org/repository/releases/"
+def mvn_central_url = "https://maven.scijava.org/repository/central/"
 
 def gh_biop_url = "https://github.com/BIOP/"
 
