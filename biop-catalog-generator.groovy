@@ -69,7 +69,7 @@ extensionList.add(cellposeExtension)
 
 
 // ------------------------ WARPY EXTENSION
-def warpyTagList = ["0.4.2"] 
+def warpyTagList = ["0.4.2", "0.4.3"] 
 def warpyVersionList = []
 warpyTagList.each{tag->
     var warpyRelease = new Release(
