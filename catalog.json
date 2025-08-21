@@ -45,23 +45,6 @@
             "min": "v0.6.0",
             "excludes": []
           }
-        },
-        {
-          "name": "v0.4.3",
-          "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.4.3/qupath-extension-warpy-0.4.3.jar",
-          "required_dependency_urls": [
-            "https://maven.scijava.org/repository/releases/net/imglib2/imglib2-realtransform/3.1.2/imglib2-realtransform-3.1.2.jar",
-            "https://repo1.maven.org/maven2/net/imglib2/imglib2/5.12.0/imglib2-5.12.0.jar",
-            "https://maven.scijava.org/repository/releases/jitk/jitk-tps/3.0.2/jitk-tps-3.0.2.jar",
-            "https://repo1.maven.org/maven2/com/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
-            "https://repo1.maven.org/maven2/gov/nist/math/jama/1.0.2/jama-1.0.2.jar"
-          ],
-          "optional_dependency_urls": [],
-          "javadoc_urls": [],
-          "version_range": {
-            "min": "v0.6.0",
-            "excludes": []
-          }
         }
       ]
     },
