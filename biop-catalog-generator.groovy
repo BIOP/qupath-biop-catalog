@@ -33,7 +33,7 @@ def ejml_version = "0.24"
 def jama_version = "1.0.2"
 
 def mvn_sj_url = "https://maven.scijava.org/repository/releases/"
-def mvn_central_url = "https://maven.scijava.org/repository/central/"
+def mvn_central_url = "https://repo1.maven.org/maven2/"
 
 def gh_biop_url = "https://github.com/BIOP/"
 
