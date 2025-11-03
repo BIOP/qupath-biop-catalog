@@ -20,8 +20,8 @@
  */
 
 // --------------- YOU NEED TO MODIFY THIS VARIABLE BEFORE RUNNING IT
-def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
-//def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
+//def savingFolder = "F:/IAGitLab/qupath-biop-catalog/catalog.json" // Nico
+def savingFolder = "D:/Remy/Github-projects/qupath-biop-catalog/catalog.json" // Rémy
 
 
 // Versions for packages which are common between different extensions
@@ -188,7 +188,7 @@ extensionList.add(hrmExtension)*/
 
 // ------------------------ BIOP EXTENSION
 
-def biopTagList = ["v3.4.2", "v3.4.1", "v3.4.0", "v3.3.0"]
+def biopTagList = ["v3.5.0", "v3.4.2", "v3.4.1", "v3.4.0", "v3.3.0"]
 def biopVersionList = []
 biopTagList.each{tag->
     var biopRelease = new Release(
