@@ -132,7 +132,7 @@ var abbaExtension = new Extension(
 extensionList.add(abbaExtension)
 
 // spotiflow extension
-def spotiflowTagList = ["v0.2.0"] 
+def spotiflowTagList = ["v0.3.1","v0.2.0"] 
 def spotiflowVersionList = []
 spotiflowTagList.each{tag->
     var spotiflowRelease = new Release(
