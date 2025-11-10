@@ -132,9 +132,26 @@ var abbaExtension = new Extension(
 extensionList.add(abbaExtension)
 
 // spotiflow extension
-def spotiflowTagList = ["v0.3.1","v0.2.0"] 
+
+// ZIP file
+def spotiflowTagList = ["v0.3.1"] 
 def spotiflowVersionList = []
 spotiflowTagList.each{tag->
+    var spotiflowRelease = new Release(
+       tag,
+       new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".zip"),
+       null,
+       null,
+       null,
+       qupathMinVersionRange
+    )
+    
+    spotiflowVersionList.add(spotiflowRelease)
+}
+
+// JAR file only
+def oldSpotiflowTagList = ["v0.2.0"] 
+oldSpotiflowTagList.each{tag->
     var spotiflowRelease = new Release(
        tag,
        new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),

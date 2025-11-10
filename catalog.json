@@ -84,7 +84,7 @@
       "releases": [
         {
           "name": "v0.3.1",
-          "main_url": "https://github.com/BIOP/qupath-extension-spotiflow/releases/download/v0.3.1/qupath-extension-spotiflow-0.3.1.jar",
+          "main_url": "https://github.com/BIOP/qupath-extension-spotiflow/releases/download/v0.3.1/qupath-extension-spotiflow-0.3.1.zip",
           "required_dependency_urls": [],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
