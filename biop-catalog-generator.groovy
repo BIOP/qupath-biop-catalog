@@ -43,7 +43,7 @@ def extensionList = []
 
 // ------------------------ CELLPOSE EXTENSION
 
-def cellposeTagList = ["v0.11.0"] 
+def cellposeTagList = ["v0.11.1", "v0.11.0"] 
 def cellposeVersionList = []
 cellposeTagList.each{tag->
     var cellposeRelease = new Release(
