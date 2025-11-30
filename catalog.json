@@ -10,6 +10,17 @@
       "starred": false,
       "releases": [
         {
+          "name": "v0.11.2",
+          "main_url": "https://github.com/BIOP/qupath-extension-cellpose/releases/download/v0.11.2/qupath-extension-cellpose-0.11.2.zip",
+          "required_dependency_urls": [],
+          "optional_dependency_urls": [],
+          "javadoc_urls": [],
+          "version_range": {
+            "min": "v0.6.0",
+            "excludes": []
+          }
+        },
+        {
           "name": "v0.11.1",
           "main_url": "https://github.com/BIOP/qupath-extension-cellpose/releases/download/v0.11.1/qupath-extension-cellpose-0.11.1.zip",
           "required_dependency_urls": [],
