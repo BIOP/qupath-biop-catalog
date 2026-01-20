@@ -116,6 +116,17 @@
       "starred": false,
       "releases": [
         {
+          "name": "v0.3.3",
+          "main_url": "https://github.com/BIOP/qupath-extension-spotiflow/releases/download/v0.3.3/qupath-extension-spotiflow-0.3.3.zip",
+          "required_dependency_urls": [],
+          "optional_dependency_urls": [],
+          "javadoc_urls": [],
+          "version_range": {
+            "min": "v0.6.0",
+            "excludes": []
+          }
+        },
+        {
           "name": "v0.3.2",
           "main_url": "https://github.com/BIOP/qupath-extension-spotiflow/releases/download/v0.3.2/qupath-extension-spotiflow-0.3.2.zip",
           "required_dependency_urls": [],
