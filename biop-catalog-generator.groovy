@@ -37,22 +37,30 @@ def mvn_central_url = "https://repo1.maven.org/maven2/"
 
 def gh_biop_url = "https://github.com/BIOP/"
 
-def qupathMinVersionRange = new VersionRange("v0.6.0", null, null)
+def qupathVersionRange0606 = new VersionRange("v0.6.0", "v0.6.0", null)
+def qupathVersionRange0607 = new VersionRange("v0.6.0", "v0.7.0", null)
+def qupathVersionRange0707 = new VersionRange("v0.7.0", "v0.7.0", null)
 
 def extensionList = []
 
 // ------------------------ CELLPOSE EXTENSION
 
-def cellposeTagList = ["v0.12.0", "v0.11.3", "v0.11.2", "v0.11.1", "v0.11.0"] 
+def cellposeTagList = [
+    "v0.12.0" : qupathVersionRange0607, 
+    "v0.11.3" : qupathVersionRange0607, 
+    "v0.11.2" : qupathVersionRange0607, 
+    "v0.11.1" : qupathVersionRange0607, 
+    "v0.11.0" : qupathVersionRange0607
+    ]
 def cellposeVersionList = []
-cellposeTagList.each{tag->
+cellposeTagList.each{tag, versionRange ->
     var cellposeRelease = new Release(
        tag,
        new URI(gh_biop_url+"qupath-extension-cellpose/releases/download/"+tag+"/qupath-extension-cellpose-"+tag[1..-1]+".zip"),
        null,
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     cellposeVersionList.add(cellposeRelease)
@@ -69,9 +77,11 @@ extensionList.add(cellposeExtension)
 
 
 // ------------------------ WARPY EXTENSION
-def warpyTagList = ["0.4.2"] 
+def warpyTagList = [
+    "0.4.2": qupathVersionRange0607
+]
 def warpyVersionList = []
-warpyTagList.each{tag->
+warpyTagList.each{tag, versionRange->
     var warpyRelease = new Release(
        "v"+tag,
                    new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +tag+                          "/qupath-extension-warpy-"+tag+                          ".jar"),
@@ -83,7 +93,7 @@ warpyTagList.each{tag->
            ),
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     warpyVersionList.add(warpyRelease)
@@ -100,9 +110,11 @@ extensionList.add(warpyExtension)
 
 
 // ------------------------ ABBA EXTENSION
-def abbaTagList = ["0.4.0"] 
+def abbaTagList = [
+    "0.4.0": qupathVersionRange0607
+]
 def abbaVersionList = []
-abbaTagList.each{tag->
+abbaTagList.each{tag, versionRange->
     var abbaRelease = new Release(
        "v"+tag,
                    new URI(gh_biop_url    +"qupath-extension-abba/releases/download/"          +tag+                          "/qupath-extension-abba-" +tag+                          ".jar"),
@@ -116,7 +128,7 @@ abbaTagList.each{tag->
            ),
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     abbaVersionList.add(abbaRelease)
@@ -134,31 +146,38 @@ extensionList.add(abbaExtension)
 // spotiflow extension
 
 // ZIP file
-def spotiflowTagList = ["v0.3.3", "v0.3.2", "v0.3.1"] 
+def spotiflowTagList = [
+    "v0.4.0": qupathVersionRange0707, 
+    "v0.3.3": qupathVersionRange0606, 
+    "v0.3.2": qupathVersionRange0606,  
+    "v0.3.1": qupathVersionRange0606
+]
 def spotiflowVersionList = []
-spotiflowTagList.each{tag->
+spotiflowTagList.each{tag, versionRange->
     var spotiflowRelease = new Release(
        tag,
        new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".zip"),
        null,
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     spotiflowVersionList.add(spotiflowRelease)
 }
 
 // JAR file only
-def oldSpotiflowTagList = ["v0.2.0"] 
-oldSpotiflowTagList.each{tag->
+def oldSpotiflowTagList = [
+    "v0.2.0": qupathVersionRange0606
+]
+oldSpotiflowTagList.each{tag, versionRange->
     var spotiflowRelease = new Release(
        tag,
        new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),
        null,
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     spotiflowVersionList.add(spotiflowRelease)
@@ -205,16 +224,24 @@ extensionList.add(hrmExtension)*/
 
 // ------------------------ BIOP EXTENSION
 
-def biopTagList = ["v3.6.0", "v3.5.0", "v3.4.2", "v3.4.1", "v3.4.0", "v3.3.0"]
+def biopTagList = [
+    "v3.7.0": qupathVersionRange0707,
+    "v3.6.0": qupathVersionRange0606,  
+    "v3.5.0": qupathVersionRange0606,  
+    "v3.4.2": qupathVersionRange0606,  
+    "v3.4.1": qupathVersionRange0606,  
+    "v3.4.0": qupathVersionRange0606,  
+    "v3.3.0": qupathVersionRange0606
+]
 def biopVersionList = []
-biopTagList.each{tag->
+biopTagList.each{tag, versionRange->
     var biopRelease = new Release(
        tag,
        new URI(gh_biop_url + "qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".jar"),
        null,
        null,
        null,
-       qupathMinVersionRange
+       versionRange
     )
     
     biopVersionList.add(biopRelease)
