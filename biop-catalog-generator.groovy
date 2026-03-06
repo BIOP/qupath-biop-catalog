@@ -15,8 +15,8 @@
  * Output: catalog.json file for use with QuPath extension manager
  * 
  * @author BIOP
- * @version 1.0
- * @requires QuPath v0.6.0+
+ * @version 2.0
+ * @requires QuPath v0.7.0+
  */
 
 // --------------- YOU NEED TO MODIFY THIS VARIABLE BEFORE RUNNING IT
@@ -37,9 +37,9 @@ def mvn_central_url = "https://repo1.maven.org/maven2/"
 
 def gh_biop_url = "https://github.com/BIOP/"
 
-def qupathVersionRange0606 = new VersionRange("v0.6.0", "v0.6.0", null)
-def qupathVersionRange0607 = new VersionRange("v0.6.0", "v0.7.0", null)
-def qupathVersionRange0707 = new VersionRange("v0.7.0", "v0.7.0", null)
+def qupathVersionRange0606 = new VersionRangeModel("v0.6.0", "v0.6.0", null)
+def qupathVersionRange0607 = new VersionRangeModel("v0.6.0", "v0.7.0", null)
+def qupathVersionRange0707 = new VersionRangeModel("v0.7.0", "v0.7.0", null)
 
 def extensionList = []
 
@@ -54,7 +54,7 @@ def cellposeTagList = [
     ]
 def cellposeVersionList = []
 cellposeTagList.each{tag, versionRange ->
-    var cellposeRelease = new Release(
+    var cellposeRelease = new ReleaseModel(
        tag,
        new URI(gh_biop_url+"qupath-extension-cellpose/releases/download/"+tag+"/qupath-extension-cellpose-"+tag[1..-1]+".zip"),
        null,
@@ -65,7 +65,7 @@ cellposeTagList.each{tag, versionRange ->
     
     cellposeVersionList.add(cellposeRelease)
 }
-var cellposeExtension = new Extension(
+var cellposeExtension = new ExtensionModel(
    "QuPath Cellpose extension",
    "QuPath extension to use Cellpose",
    "BIOP",
@@ -78,11 +78,11 @@ extensionList.add(cellposeExtension)
 
 // ------------------------ WARPY EXTENSION
 def warpyTagList = [
-    "0.4.2": qupathVersionRange0607
+    "0.4.2": qupathVersionRange0606
 ]
 def warpyVersionList = []
 warpyTagList.each{tag, versionRange->
-    var warpyRelease = new Release(
+    var warpyRelease = new ReleaseModel(
        "v"+tag,
                    new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +tag+                          "/qupath-extension-warpy-"+tag+                          ".jar"),
            List.of(new URI(mvn_sj_url     +"net/imglib2/imglib2-realtransform/"                +imglib2_realtransform_version+"/imglib2-realtransform-" +imglib2_realtransform_version+".jar"), // real-transform
@@ -98,7 +98,7 @@ warpyTagList.each{tag, versionRange->
     
     warpyVersionList.add(warpyRelease)
 }
-var warpyExtension = new Extension(
+var warpyExtension = new ExtensionModel(
    "QuPath Warpy extension",
    "Warpy - QuPath extension that supports transformations (affine, spline) of images.",
    "BIOP",
@@ -111,11 +111,11 @@ extensionList.add(warpyExtension)
 
 // ------------------------ ABBA EXTENSION
 def abbaTagList = [
-    "0.4.0": qupathVersionRange0607
+    "0.4.0": qupathVersionRange0606
 ]
 def abbaVersionList = []
 abbaTagList.each{tag, versionRange->
-    var abbaRelease = new Release(
+    var abbaRelease = new ReleaseModel(
        "v"+tag,
                    new URI(gh_biop_url    +"qupath-extension-abba/releases/download/"          +tag+                          "/qupath-extension-abba-" +tag+                          ".jar"),
            List.of(new URI(mvn_sj_url     +"net/imglib2/imglib2-realtransform/"                +imglib2_realtransform_version+"/imglib2-realtransform-" +imglib2_realtransform_version+".jar"), // real-transform
@@ -133,7 +133,7 @@ abbaTagList.each{tag, versionRange->
     
     abbaVersionList.add(abbaRelease)
 }
-var abbaExtension = new Extension(
+var abbaExtension = new ExtensionModel(
    "QuPath ABBA extension",
    "QuPath extension to use Aligning Big Brain and Atlases",
    "BIOP",
@@ -154,7 +154,7 @@ def spotiflowTagList = [
 ]
 def spotiflowVersionList = []
 spotiflowTagList.each{tag, versionRange->
-    var spotiflowRelease = new Release(
+    var spotiflowRelease = new ReleaseModel(
        tag,
        new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".zip"),
        null,
@@ -171,7 +171,7 @@ def oldSpotiflowTagList = [
     "v0.2.0": qupathVersionRange0606
 ]
 oldSpotiflowTagList.each{tag, versionRange->
-    var spotiflowRelease = new Release(
+    var spotiflowRelease = new ReleaseModel(
        tag,
        new URI(gh_biop_url + "qupath-extension-spotiflow/releases/download/"+tag+"/qupath-extension-spotiflow-"+tag[1..-1]+".jar"),
        null,
@@ -182,7 +182,7 @@ oldSpotiflowTagList.each{tag, versionRange->
     
     spotiflowVersionList.add(spotiflowRelease)
 }
-var spotiflowExtension = new Extension(
+var spotiflowExtension = new ExtensionModel(
    "QuPath Spotiflow extension",
    "QuPath extension to use Spotiflow",
    "BIOP",
@@ -235,7 +235,7 @@ def biopTagList = [
 ]
 def biopVersionList = []
 biopTagList.each{tag, versionRange->
-    var biopRelease = new Release(
+    var biopRelease = new ReleaseModel(
        tag,
        new URI(gh_biop_url + "qupath-extension-biop/releases/download/"+tag+"/qupath-extension-biop-"+tag[1..-1]+".jar"),
        null,
@@ -246,7 +246,7 @@ biopTagList.each{tag, versionRange->
     
     biopVersionList.add(biopRelease)
 }
-var biopExtension = new Extension(
+var biopExtension = new ExtensionModel(
    "QuPath BIOP extension",
    "QuPath extension containing utilitiy functions by the BIOP",
    "BIOP",
@@ -257,7 +257,7 @@ var biopExtension = new Extension(
 extensionList.add(biopExtension)
 
 
-var catalog = new Catalog(
+var catalog = new CatalogModel(
    "QuPath-BIOP catalog",
    "Extensions maintained by the BIOP team",
    extensionList
@@ -274,8 +274,7 @@ try (FileWriter fileWriter = new FileWriter(savingFolder)) {
 }
 println "Catalog saved to " + savingFolder
 
-
-import qupath.ext.extensionmanager.core.catalog.*
+import qupath.ext.extensionmanager.core.model.*
 import com.google.gson.GsonBuilder
 import com.google.gson.FieldNamingPolicy
 import java.nio.file.Paths
