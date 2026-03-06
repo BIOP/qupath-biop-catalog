@@ -78,7 +78,7 @@ extensionList.add(cellposeExtension)
 
 // ------------------------ WARPY EXTENSION
 def warpyTagList = [
-    "0.4.2": qupathVersionRange0606
+    "0.4.2": qupathVersionRange0607
 ]
 def warpyVersionList = []
 warpyTagList.each{tag, versionRange->
@@ -111,7 +111,7 @@ extensionList.add(warpyExtension)
 
 // ------------------------ ABBA EXTENSION
 def abbaTagList = [
-    "0.4.0": qupathVersionRange0606
+    "0.4.0": qupathVersionRange0607
 ]
 def abbaVersionList = []
 abbaTagList.each{tag, versionRange->
