@@ -127,7 +127,7 @@ abbaTagList.each{tag, versionRange->
                    new URI(mvn_sj_url     +"jitk/jitk-tps/"                                    +jitk_tps_version+             "/jitk-tps-"              +jitk_tps_version+             ".jar"), // jitk-tps
                    new URI(mvn_central_url+"com/googlecode/efficient-java-matrix-library/ejml/"+ejml_version+                 "/ejml-"                  +ejml_version+                 ".jar"), // ejml
                    new URI(mvn_central_url+"gov/nist/math/jama/"                               +jama_version+                 "/jama-"                  +jama_version+                 ".jar"), // jama
-                   new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +abbaWarpyMap[tag]+              "/qupath-extension-warpy-"+abbaWarpyMap[tag]+              ".jar")  // warpy
+                   new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +abbaWarpyMap[tag]+            "/qupath-extension-warpy-"+abbaWarpyMap[tag]+              ".jar")  // warpy
       
            ),
        null,
