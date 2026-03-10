@@ -114,7 +114,7 @@
             "https://maven.scijava.org/repository/releases/jitk/jitk-tps/3.0.2/jitk-tps-3.0.2.jar",
             "https://repo1.maven.org/maven2/com/googlecode/efficient-java-matrix-library/ejml/0.24/ejml-0.24.jar",
             "https://repo1.maven.org/maven2/gov/nist/math/jama/1.0.2/jama-1.0.2.jar",
-            "https://github.com/BIOP/qupath-extension-warpy/releases/download/null/qupath-extension-warpy-null.jar"
+            "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.4.2/qupath-extension-warpy-0.4.2.jar"
           ],
           "optional_dependency_urls": [],
           "javadoc_urls": [],
