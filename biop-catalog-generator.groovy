@@ -151,6 +151,7 @@ extensionList.add(abbaExtension)
 
 // ZIP file
 def spotiflowTagList = [
+    "v0.4.1": qupathVersionRange0707, 
     "v0.4.0": qupathVersionRange0707, 
     "v0.3.3": qupathVersionRange0606, 
     "v0.3.2": qupathVersionRange0606,  
