@@ -79,6 +79,18 @@
       "starred": false,
       "releases": [
         {
+          "name": "v0.5.0",
+          "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.5.0/qupath-extension-warpy-0.5.0.jar",
+          "required_dependency_urls": [],
+          "optional_dependency_urls": [],
+          "javadoc_urls": [],
+          "version_range": {
+            "min": "v0.7.0",
+            "max": "v0.7.0",
+            "excludes": []
+          }
+        },
+        {
           "name": "v0.4.2",
           "main_url": "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.4.2/qupath-extension-warpy-0.4.2.jar",
           "required_dependency_urls": [
@@ -105,6 +117,20 @@
       "homepage": "https://github.com/BIOP/qupath-extension-abba",
       "starred": false,
       "releases": [
+        {
+          "name": "v0.5.0",
+          "main_url": "https://github.com/BIOP/qupath-extension-abba/releases/download/0.5.0/qupath-extension-abba-0.5.0.jar",
+          "required_dependency_urls": [
+            "https://github.com/BIOP/qupath-extension-warpy/releases/download/0.5.0/qupath-extension-warpy-0.5.0.jar"
+          ],
+          "optional_dependency_urls": [],
+          "javadoc_urls": [],
+          "version_range": {
+            "min": "v0.7.0",
+            "max": "v0.7.0",
+            "excludes": []
+          }
+        },
         {
           "name": "v0.4.0",
           "main_url": "https://github.com/BIOP/qupath-extension-abba/releases/download/0.4.0/qupath-extension-abba-0.4.0.jar",

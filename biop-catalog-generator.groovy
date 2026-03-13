@@ -77,10 +77,29 @@ extensionList.add(cellposeExtension)
 
 
 // ------------------------ WARPY EXTENSION
+
+// QuPath 0.7 release (no extra dependencies, shipped with QuPath)
+def warpy07TagList = [
+    "0.5.0": qupathVersionRange0707
+]
+def warpyVersionList = []
+warpy07TagList.each{tag, versionRange->
+    var warpyRelease = new ReleaseModel(
+       "v"+tag,
+       new URI(gh_biop_url+"qupath-extension-warpy/releases/download/"+tag+"/qupath-extension-warpy-"+tag+".jar"),
+       null,
+       null,
+       null,
+       versionRange
+    )
+
+    warpyVersionList.add(warpyRelease)
+}
+
+// QuPath 0.6 releases (with extra dependencies)
 def warpyTagList = [
     "0.4.2": qupathVersionRange0606
 ]
-def warpyVersionList = []
 warpyTagList.each{tag, versionRange->
     var warpyRelease = new ReleaseModel(
        "v"+tag,
@@ -110,14 +129,36 @@ extensionList.add(warpyExtension)
 
 
 // ------------------------ ABBA EXTENSION
+
+// abba version: warpy version
+def abbaWarpyMap = [
+    "0.5.0": "0.5.0",
+    "0.4.0": "0.4.2"
+]
+
+// QuPath 0.7 release (only Warpy as dependency, no Maven deps needed)
+def abba07TagList = [
+    "0.5.0": qupathVersionRange0707
+]
+def abbaVersionList = []
+abba07TagList.each{tag, versionRange->
+    var abbaRelease = new ReleaseModel(
+       "v"+tag,
+       new URI(gh_biop_url+"qupath-extension-abba/releases/download/"+tag+"/qupath-extension-abba-"+tag+".jar"),
+       List.of(new URI(gh_biop_url+"qupath-extension-warpy/releases/download/"+abbaWarpyMap[tag]+"/qupath-extension-warpy-"+abbaWarpyMap[tag]+".jar")  // warpy
+       ),
+       null,
+       null,
+       versionRange
+    )
+
+    abbaVersionList.add(abbaRelease)
+}
+
+// QuPath 0.6 releases (with all extra dependencies)
 def abbaTagList = [
     "0.4.0": qupathVersionRange0606
 ]
-// abba version: warpy version
-def abbaWarpyMap = [
-    "0.4.0": "0.4.2"
-]
-def abbaVersionList = []
 abbaTagList.each{tag, versionRange->
     var abbaRelease = new ReleaseModel(
        "v"+tag,
@@ -128,13 +169,13 @@ abbaTagList.each{tag, versionRange->
                    new URI(mvn_central_url+"com/googlecode/efficient-java-matrix-library/ejml/"+ejml_version+                 "/ejml-"                  +ejml_version+                 ".jar"), // ejml
                    new URI(mvn_central_url+"gov/nist/math/jama/"                               +jama_version+                 "/jama-"                  +jama_version+                 ".jar"), // jama
                    new URI(gh_biop_url    +"qupath-extension-warpy/releases/download/"         +abbaWarpyMap[tag]+            "/qupath-extension-warpy-"+abbaWarpyMap[tag]+              ".jar")  // warpy
-      
+
            ),
        null,
        null,
        versionRange
     )
-    
+
     abbaVersionList.add(abbaRelease)
 }
 var abbaExtension = new ExtensionModel(
