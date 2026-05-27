@@ -46,6 +46,7 @@ def extensionList = []
 // ------------------------ CELLPOSE EXTENSION
 
 def cellposeTagList = [
+    "v0.12.1" : qupathVersionRange0607, 
     "v0.12.0" : qupathVersionRange0607, 
     "v0.11.3" : qupathVersionRange0607, 
     "v0.11.2" : qupathVersionRange0607, 
